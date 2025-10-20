@@ -25,7 +25,7 @@ export const vehicles: Vehicle[] = [
     type: 'SUV',
     pricePerDay: 1200,
     dailyMiles: 200,
-    image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80',
+    image: '/vehicles/cadillac-escalade-2021-main.webp',
     features: ['Premium Interior', 'Advanced Safety', 'Spacious Seating', 'Luxury Amenities'],
     description: 'Experience ultimate luxury and space with our 2021 Cadillac Escalade. Perfect for corporate events, weddings, or making a grand entrance.',
     category: 'ultra-luxury'
@@ -40,7 +40,7 @@ export const vehicles: Vehicle[] = [
     type: 'SUV',
     pricePerDay: 1500,
     dailyMiles: 250,
-    image: 'https://images.unsplash.com/photo-1621135802920-133df287f89c?w=800&q=80',
+    image: '/vehicles/lamborghini-urus-2024-green-main.webp',
     features: ['Super SUV Performance', 'Exotic Styling', 'V8 Engine', 'Carbon Fiber Details'],
     description: 'The pinnacle of exotic SUV performance. Our 2024 Lamborghini Urus combines supercar performance with SUV practicality.',
     category: 'ultra-luxury'
@@ -55,7 +55,7 @@ export const vehicles: Vehicle[] = [
     type: 'Sport',
     pricePerDay: 1400,
     dailyMiles: 100,
-    image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&q=80',
+    image: '/vehicles/1_fZKytaRAHmwaqNth2rrNqg_1760998420015_na1fn_L2hvbWUvdWJ1bnR1L3N0cmFkYS1hdXRvLWdyb3VwL2NsaWVudC9wdWJsaWMvdmVoaWNsZXMvbGFtYm9yZ2hpbmlfdXJ1c18yMDIxX3llbGxvdw.webp',
     features: ['640 HP', 'Sport Mode', 'Exotic Design', 'Premium Sound System'],
     description: 'Turn heads with this stunning yellow Lamborghini Urus. The perfect blend of exotic performance and everyday usability.',
     category: 'ultra-luxury'
@@ -70,7 +70,7 @@ export const vehicles: Vehicle[] = [
     type: 'SUV',
     pricePerDay: 550,
     dailyMiles: 150,
-    image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&q=80',
+    image: '/vehicles/mercedes-g63-2019-blue-main.webp',
     features: ['AMG Performance', 'Iconic Design', 'Off-Road Capable', 'Luxury Interior'],
     description: 'The legendary G-Wagon in stunning blue. Iconic design meets modern luxury and performance.',
     category: 'premium'
@@ -85,7 +85,7 @@ export const vehicles: Vehicle[] = [
     type: 'SUV',
     pricePerDay: 699,
     dailyMiles: 150,
-    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80',
+    image: '/vehicles/0_5CYYLDNwZdfSirs8pXM4JH_1760998418988_na1fn_L2hvbWUvdWJ1bnR1L3N0cmFkYS1hdXRvLWdyb3VwL2NsaWVudC9wdWJsaWMvdmVoaWNsZXMvbWVyY2VkZXMtYmVuel9nNjNfMjAyM19zaWx2ZXI.webp',
     features: ['Matte Finish', 'AMG V8', 'Premium Package', 'Advanced Tech'],
     description: 'Exclusive matte gray finish on this powerful G63. Stand out with understated elegance and raw power.',
     category: 'premium'
@@ -100,7 +100,7 @@ export const vehicles: Vehicle[] = [
     type: 'SUV',
     pricePerDay: 850,
     dailyMiles: 200,
-    image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80',
+    image: '/vehicles/2_GwhPeCZ6RCv3qiQNW45pl9_1760998414422_na1fn_L2hvbWUvdWJ1bnR1L3N0cmFkYS1hdXRvLWdyb3VwL2NsaWVudC9wdWJsaWMvdmVoaWNsZXMvTWVyY2VkZXMtQmVuel9HTFMtQ2xhc3NfMjAyMV9CbGFjaw.webp',
     features: ['7-Passenger Seating', 'Executive Rear Seats', 'Panoramic Roof', 'MBUX System'],
     description: 'The S-Class of SUVs. Perfect for executive transportation or family luxury travel.',
     category: 'premium'
@@ -115,7 +115,7 @@ export const vehicles: Vehicle[] = [
     type: 'SUV',
     pricePerDay: 220,
     dailyMiles: 200,
-    image: 'https://images.unsplash.com/photo-1617886903355-9354bb57751f?w=800&q=80',
+    image: '/vehicles/5_7I1oftbveUUZGAGDA52kCy_1760998433637_na1fn_L2hvbWUvdWJ1bnR1L3N0cmFkYS1hdXRvLWdyb3VwL2NsaWVudC9wdWJsaWMvdmVoaWNsZXMvQk1XX1g3XzIwMjBfQmxhY2s.webp',
     features: ['Spacious Interior', 'Premium Comfort', 'Advanced Driver Assistance', 'Elegant Design'],
     description: 'BMW\'s flagship SUV offers commanding presence and refined luxury at an exceptional value.',
     category: 'mid-tier'
@@ -130,7 +130,7 @@ export const vehicles: Vehicle[] = [
     type: 'Coupe',
     pricePerDay: 299,
     dailyMiles: 150,
-    image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80',
+    image: '/vehicles/4_1LmpPKw5kqmbmVCzPz3SoB_1760998447636_na1fn_L2hvbWUvdWJ1bnR1L3N0cmFkYS1hdXRvLWdyb3VwL2NsaWVudC9wdWJsaWMvdmVoaWNsZXMvQk1XXzg1MGlfMjAxOV9CbGFjaw.webp',
     features: ['V8 Power', 'Sport Coupe', 'Luxury Grand Tourer', 'Premium Audio'],
     description: 'The ultimate grand touring coupe. Powerful V8 performance wrapped in elegant luxury.',
     category: 'mid-tier'
@@ -145,7 +145,7 @@ export const vehicles: Vehicle[] = [
     type: 'Pickup-truck',
     pricePerDay: 499,
     dailyMiles: 300,
-    image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80',
+    image: '/vehicles/6_5w5E3ZVXJEhzc6fyYeF4J1_1760998426194_na1fn_L2hvbWUvdWJ1bnR1L3N0cmFkYS1hdXRvLWdyb3VwL2NsaWVudC9wdWJsaWMvdmVoaWNsZXMvVGVzbGFfQ3liZXJ0cnVja18yMDI0X1NpbHZlcg.webp',
     features: ['Electric Power', 'Futuristic Design', 'Ultra-Hard Stainless Steel', 'Autopilot'],
     description: 'The future of trucks is here. Experience the revolutionary Cybertruck with its unique design and electric performance.',
     category: 'mid-tier'
@@ -160,7 +160,7 @@ export const vehicles: Vehicle[] = [
     type: 'Sedan',
     pricePerDay: 80,
     dailyMiles: 200,
-    image: 'https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&q=80',
+    image: '/vehicles/3_nsBhOY2uTSr69s2P9SZs99_1760998425184_na1fn_L2hvbWUvdWJ1bnR1L3N0cmFkYS1hdXRvLWdyb3VwL2NsaWVudC9wdWJsaWMvdmVoaWNsZXMvMjAyMF9Ib25kYV9BY2NvcmRfQmxhY2s.webp',
     features: ['Fuel Efficient', 'Reliable', 'Comfortable', 'Modern Tech'],
     description: 'Reliable and comfortable transportation at an unbeatable price. Perfect for everyday luxury.',
     category: 'standard'

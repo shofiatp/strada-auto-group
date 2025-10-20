@@ -34,6 +34,11 @@ export function MobileMenu() {
               Services
             </Button>
           </Link>
+          <Link href="/faq" onClick={() => setOpen(false)}>
+            <Button variant="ghost" className="w-full justify-start text-lg">
+              FAQ
+            </Button>
+          </Link>
           <a href="/#about" onClick={() => setOpen(false)}>
             <Button variant="ghost" className="w-full justify-start text-lg">
               About
