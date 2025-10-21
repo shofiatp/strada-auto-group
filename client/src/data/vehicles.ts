@@ -111,7 +111,6 @@ export const vehicles: Vehicle[] = [
       "/vehicles/'mercedes-benz-g63'-4.webp",
       "/vehicles/'mercedes-benz-g63'-5.webp"
     ],
-    video: '/GWagon.MP4',
     features: ['AMG Performance', 'Iconic Design', 'Off-Road Capable', 'Luxury Interior'],
     description: 'The legendary G-Wagon in stunning blue. Iconic design meets modern luxury and performance.',
     category: 'premium'
@@ -141,6 +140,7 @@ export const vehicles: Vehicle[] = [
       '/vehicles/mercedes-benz-g63-10.webp',
       '/vehicles/mercedes-benz-g63-11.webp'
     ],
+    video: '/GWagon.MP4',
     features: ['Matte Finish', 'AMG V8', 'Premium Package', 'Advanced Tech'],
     description: 'Exclusive matte gray finish on this powerful G63. Stand out with understated elegance and raw power.',
     category: 'premium'
