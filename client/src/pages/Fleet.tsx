@@ -180,7 +180,11 @@ export default function Fleet() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredVehicles.map((vehicle) => (
                 <Card key={vehicle.id} className="overflow-hidden group hover:shadow-lg transition-shadow">
-                  <ImageGallery images={vehicle.images} alt={vehicle.name} video={vehicle.video} />
+                  <Link href={`/vehicle/${vehicle.id}`}>
+                    <div className="cursor-pointer">
+                      <ImageGallery images={vehicle.images} alt={vehicle.name} video={vehicle.video} />
+                    </div>
+                  </Link>
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <div>
@@ -209,6 +213,9 @@ export default function Fleet() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex gap-2">
+                    <Button variant="outline" className="flex-1" asChild>
+                      <Link href={`/vehicle/${vehicle.id}`}>View Details</Link>
+                    </Button>
                     <Button className="flex-1" asChild>
                       <a href="/#contact">Reserve Now</a>
                     </Button>

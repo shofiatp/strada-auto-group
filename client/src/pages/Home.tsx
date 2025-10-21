@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { vehicles } from "@/data/vehicles";
-import { Phone, Mail, MapPin, Clock, ChevronRight, Car, Users, Briefcase, Heart, Camera, Sparkles } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ChevronRight, Car, Users, Briefcase, Heart, Camera, Sparkles, Instagram, Facebook, Youtube } from "lucide-react";
 import { Link } from "wouter";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ImageGallery } from "@/components/ImageGallery";
+import { ContactForm } from "@/components/ContactForm";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   const featuredVehicles = vehicles.filter(v => v.category === 'ultra-luxury' || v.category === 'premium').slice(0, 6);
@@ -111,7 +113,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {featuredVehicles.map((vehicle) => (
               <Card key={vehicle.id} className="overflow-hidden group hover:shadow-lg transition-shadow">
-              <ImageGallery images={vehicle.images} alt={vehicle.name} video={vehicle.video} />
+                <Link href={`/vehicle/${vehicle.id}`}>
+                  <div className="cursor-pointer">
+                    <ImageGallery images={vehicle.images} alt={vehicle.name} video={vehicle.video} />
+                  </div>
+                </Link>
                 <CardHeader>
                   <div className="flex items-start justify-between mb-2">
                     <div>
@@ -128,9 +134,12 @@ export default function Home() {
                     <span className="text-2xl font-bold">${vehicle.pricePerDay}<span className="text-sm font-normal text-muted-foreground">/day</span></span>
                   </div>
                 </CardContent>
-                <CardFooter>
-                  <Button className="w-full" asChild>
-                    <a href="#contact">Reserve Now</a>
+                <CardFooter className="flex gap-2">
+                  <Button variant="outline" className="flex-1" asChild>
+                    <Link href={`/vehicle/${vehicle.id}`}>Details</Link>
+                  </Button>
+                  <Button className="flex-1" asChild>
+                    <a href="#contact">Reserve</a>
                   </Button>
                 </CardFooter>
               </Card>
@@ -269,6 +278,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <Testimonials />
+
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-slate-50">
         <div className="container">
@@ -325,45 +337,7 @@ export default function Home() {
                   <CardDescription>We'll get back to you within 24 hours</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form className="space-y-4">
-                    <div>
-                      <label htmlFor="name" className="text-sm font-medium">Name</label>
-                      <input 
-                        id="name"
-                        type="text" 
-                        className="w-full mt-1 px-3 py-2 border rounded-md"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="text-sm font-medium">Email</label>
-                      <input 
-                        id="email"
-                        type="email" 
-                        className="w-full mt-1 px-3 py-2 border rounded-md"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="text-sm font-medium">Phone</label>
-                      <input 
-                        id="phone"
-                        type="tel" 
-                        className="w-full mt-1 px-3 py-2 border rounded-md"
-                        placeholder="(555) 123-4567"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="message" className="text-sm font-medium">Message</label>
-                      <textarea 
-                        id="message"
-                        rows={4}
-                        className="w-full mt-1 px-3 py-2 border rounded-md"
-                        placeholder="Tell us about your rental needs..."
-                      ></textarea>
-                    </div>
-                    <Button type="submit" className="w-full">Send Message</Button>
-                  </form>
+                  <ContactForm />
                 </CardContent>
               </Card>
             </div>
@@ -377,7 +351,18 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <img src="/sag-logo-new.png" alt="Strada Auto Group" className="h-12 w-auto mb-4" />
-              <p className="text-sm">Premium exotic and luxury car rentals in Long Island, NY.</p>
+              <p className="text-sm mb-4">Premium exotic and luxury car rentals in Long Island, NY.</p>
+              <div className="flex gap-3">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  <Youtube className="h-5 w-5" />
+                </a>
+              </div>
             </div>
             <div>
               <h3 className="font-semibold text-white mb-4">Quick Links</h3>
@@ -389,12 +374,11 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-4">Services</h3>
+              <h3 className="font-semibold text-white mb-4">Legal</h3>
               <ul className="space-y-2 text-sm">
-                <li>Self-Drive Rentals</li>
-                <li>Chauffeur Services</li>
-                <li>Corporate Events</li>
-                <li>Weddings</li>
+                <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
+                <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
               </ul>
             </div>
             <div>
@@ -407,8 +391,11 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-slate-800 pt-8 text-center text-sm">
+          <div className="border-t border-slate-800 pt-8 text-center text-sm space-y-2">
             <p>&copy; {new Date().getFullYear()} Strada Auto Group. All rights reserved.</p>
+            <p className="text-xs text-slate-400">
+              <Link href="/terms" className="hover:text-white transition-colors">Terms</Link> · <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link> · <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>
+            </p>
           </div>
         </div>
       </footer>

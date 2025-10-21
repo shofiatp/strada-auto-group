@@ -9,6 +9,9 @@ import Fleet from "./pages/Fleet";
 import Services from "./pages/Services";
 import FAQ from "./pages/FAQ";
 import Gallery from "./pages/Gallery";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import VehicleDetail from "./pages/VehicleDetail";
 
 function Router() {
   return (
@@ -18,6 +21,9 @@ function Router() {
       <Route path={"/services"} component={Services} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/gallery"} component={Gallery} />
+      <Route path={"/terms"} component={Terms} />
+      <Route path={"/privacy"} component={Privacy} />
+      <Route path={"/vehicle/:id"} component={VehicleDetail} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
