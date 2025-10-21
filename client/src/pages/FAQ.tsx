@@ -139,7 +139,9 @@ export default function FAQ() {
         <div className="container flex h-20 items-center justify-between">
           <div className="flex items-center gap-3">
             <Link href="/">
-              <img src="/sag-logo.jpg" alt="Strada Auto Group" className="h-12 w-auto cursor-pointer" />
+              <div className="bg-gradient-to-br from-blue-600 to-blue-700 backdrop-blur-sm px-5 py-3 rounded-lg border border-blue-400/30 hover:from-blue-500 hover:to-blue-600 transition-all shadow-lg">
+                <img src="/sag-logo-new.png" alt="Strada Auto Group" className="h-16 w-auto cursor-pointer drop-shadow-[0_0_15px_rgba(192,192,192,0.8)]" />
+              </div>
             </Link>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -223,7 +225,7 @@ export default function FAQ() {
         <div className="container">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <img src="/sag-logo.jpg" alt="Strada Auto Group" className="h-12 w-auto mb-4 brightness-200" />
+              <img src="/sag-logo-new.png" alt="Strada Auto Group" className="h-12 w-auto mb-4" />
               <p className="text-sm">Premium exotic and luxury car rentals in Long Island, NY.</p>
             </div>
             <div>
