@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Fleet from "./pages/Fleet";
 import Services from "./pages/Services";
 import FAQ from "./pages/FAQ";
+import Gallery from "./pages/Gallery";
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
       <Route path={"/fleet"} component={Fleet} />
       <Route path={"/services"} component={Services} />
       <Route path={"/faq"} component={FAQ} />
+      <Route path={"/gallery"} component={Gallery} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

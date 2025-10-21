@@ -23,6 +23,7 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
             <a href="#fleet" className="transition-colors hover:text-slate-300">Fleet</a>
             <a href="#services" className="transition-colors hover:text-slate-300">Services</a>
+            <Link href="/gallery" className="transition-colors hover:text-slate-300">Gallery</Link>
             <a href="#about" className="transition-colors hover:text-slate-300">About</a>
             <a href="#contact" className="transition-colors hover:text-slate-300">Contact</a>
           </nav>
@@ -40,8 +41,17 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 md:py-32">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600&q=80')] bg-cover bg-center opacity-20"></div>
+      <section className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white py-24 md:py-32 overflow-hidden">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        >
+          <source src="/UrusS.MP4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/60 via-slate-900/60 to-slate-800/60"></div>
         <div className="container relative z-10">
           <div className="max-w-3xl">
             <Badge className="mb-4 bg-white/10 text-white border-white/20">Long Island's Premier Luxury Car Rental</Badge>
@@ -101,7 +111,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {featuredVehicles.map((vehicle) => (
               <Card key={vehicle.id} className="overflow-hidden group hover:shadow-lg transition-shadow">
-              <ImageGallery images={vehicle.images} alt={vehicle.name} />
+              <ImageGallery images={vehicle.images} alt={vehicle.name} video={vehicle.video} />
                 <CardHeader>
                   <div className="flex items-start justify-between mb-2">
                     <div>

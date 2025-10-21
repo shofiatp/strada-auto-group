@@ -10,6 +10,7 @@ export interface Vehicle {
   dailyMiles: number;
   image: string;
   images: string[]; // Gallery images
+  video?: string; // Optional video URL
   features: string[];
   description: string;
   category: 'ultra-luxury' | 'premium' | 'mid-tier' | 'standard';
@@ -62,6 +63,7 @@ export const vehicles: Vehicle[] = [
       '/vehicles/lamborghini-urus-9.webp',
       '/vehicles/lamborghini-urus-10.webp'
     ],
+    video: '/UrusS.MP4',
     features: ['Super SUV Performance', 'Exotic Styling', 'V8 Engine', 'Carbon Fiber Details'],
     description: 'The pinnacle of exotic SUV performance. Our 2024 Lamborghini Urus combines supercar performance with SUV practicality.',
     category: 'ultra-luxury'
@@ -85,6 +87,7 @@ export const vehicles: Vehicle[] = [
       '/vehicles/Lamborghini-Urus-4.jpeg',
       '/vehicles/Lamborghini-Urus-5.jpeg'
     ],
+    video: '/yellowurus.MP4',
     features: ['640 HP', 'Sport Mode', 'Exotic Design', 'Premium Sound System'],
     description: 'Turn heads with this stunning yellow Lamborghini Urus. The perfect blend of exotic performance and everyday usability.',
     category: 'ultra-luxury'
@@ -108,6 +111,7 @@ export const vehicles: Vehicle[] = [
       "/vehicles/'mercedes-benz-g63'-4.webp",
       "/vehicles/'mercedes-benz-g63'-5.webp"
     ],
+    video: '/GWagon.MP4',
     features: ['AMG Performance', 'Iconic Design', 'Off-Road Capable', 'Luxury Interior'],
     description: 'The legendary G-Wagon in stunning blue. Iconic design meets modern luxury and performance.',
     category: 'premium'
@@ -160,8 +164,10 @@ export const vehicles: Vehicle[] = [
       '/vehicles/mercedes-benz-gls-class-3.webp',
       '/vehicles/mercedes-benz-gls-class-4.webp',
       '/vehicles/mercedes-benz-gls-class-7.webp',
-      '/vehicles/mercedes-benz-gls-class-8.webp'
+      '/vehicles/mercedes-benz-gls-class-8.webp',
+      '/IMG_1400.JPG'
     ],
+    video: '/maybach.MP4',
     features: ['7-Passenger Seating', 'Executive Rear Seats', 'Panoramic Roof', 'MBUX System'],
     description: 'The S-Class of SUVs. Perfect for executive transportation or family luxury travel.',
     category: 'premium'
