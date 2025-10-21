@@ -31,13 +31,13 @@ export function ImageGallery({ images, alt, currentIndex = 0 }: ImageGalleryProp
       {/* Thumbnail Grid */}
       <div className="grid grid-cols-1 gap-2">
         <div 
-          className="aspect-video overflow-hidden bg-slate-100 cursor-pointer relative group"
+          className="aspect-video overflow-hidden bg-slate-100 cursor-pointer relative group flex items-center justify-center"
           onClick={() => handleImageClick(0)}
         >
           <img 
             src={images[0]} 
             alt={alt}
-            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
           />
           {images.length > 1 && (
             <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">

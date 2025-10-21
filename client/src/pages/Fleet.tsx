@@ -178,7 +178,7 @@ export default function Fleet() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredVehicles.map((vehicle) => (
                 <Card key={vehicle.id} className="overflow-hidden group hover:shadow-lg transition-shadow">
-                  <ImageGallery images={[vehicle.image]} alt={vehicle.name} />
+                  <ImageGallery images={vehicle.images} alt={vehicle.name} />
                   <CardHeader>
                     <div className="flex items-start justify-between mb-2">
                       <div>
